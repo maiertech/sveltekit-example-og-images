@@ -5,7 +5,7 @@
 <svelte:head>
 	<title>{title}</title>
 	<meta content={title} property="og:title" />
-	<meta content="https://og-images.maier.tech/og-image/hello-og-image" property="og:image" />
+	<meta content="https://og-images.maier.tech/og-images/hello-og-image.png" property="og:image" />
 </svelte:head>
 
 <h1>Welcome to SvelteKit</h1>
