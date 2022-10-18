@@ -40,8 +40,8 @@ export async function componentToPng(component, props, width, height) {
 
 	return new Response(pngData.asPng(), {
 		headers: {
-			'content-type': 'image/png'
-			// 'cache-control': 'public, max-age=3600, immutable'
+			'content-type': 'image/png',
+			'cache-control': 'public, max-age=3600, immutable'
 		}
 	});
 }

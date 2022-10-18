@@ -4,8 +4,9 @@
 
 <svelte:head>
 	<title>{title}</title>
-	<meta content={title} property="og:title" />
-	<meta content="https://og-images.maier.tech/og-images/hello-og-image.png" property="og:image" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta property="og:title" content={title} />
+	<meta property="og:image" content="https://og-images.maier.tech/og-images/hello-og-image.png" />
 </svelte:head>
 
 <h1>Welcome to SvelteKit</h1>
