@@ -13,5 +13,8 @@
 	"files.insertFinalNewline": true,
 	"files.trimTrailingWhitespace": true,
 
+	"svelte.enable-ts-plugin": true,
+	"svelte.plugin.svelte.note-new-transformation": false,
+
 	"thunder-client.saveToWorkspace": true
 }
