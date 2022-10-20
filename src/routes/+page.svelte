@@ -6,8 +6,11 @@
 	<title>{title}</title>
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta property="og:title" content={title} />
-	<meta property="og:image" content="https://og-images.maier.tech/og-images/hello-og-image.png" />
+	<meta property="og:image" content="https://og-images.maier.tech/og-images/hello-og-image" />
 </svelte:head>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<h1>OG images</h1>
+
+<ul>
+	<li><a href="/hello-og-image">hello-og-image</a></li>
+</ul>
