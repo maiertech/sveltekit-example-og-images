@@ -8,7 +8,7 @@
 		justify-content: center;
 		align-items: center;
 		font-family: 'Signika', sans-serif;
-		font-size: xx-large;
+		font-size: 96px;
 		font-weight: bold;
 		white-space: pre;
 		color: black;
