@@ -3,22 +3,23 @@ import fs from 'fs';
 
 /** @type {import('vite').UserConfig} */
 const config = {
-	plugins: [base64(), sveltekit()]
+	plugins: [rawFonts(['.ttf']), sveltekit()]
 };
 
-// Custom plugin: import as base64 string by adding ?base64 to the end of the import.
-function base64() {
+/**
+ * Custom plugin: import font as buffer.
+ * @param {string[]} ext
+ */
+function rawFonts(ext) {
 	return {
-		name: 'vite-plugin-base64-loader',
+		name: 'vite-plugin-raw-fonts',
+		/** @param {string} id */
 		transform(code, id) {
-			const [path, query] = id.split('?');
-
-			if (query !== 'base64') {
-				return null;
+			// Check if file ends with an extension from extension array.
+			if (ext.some((e) => id.endsWith(e))) {
+				const buffer = fs.readFileSync(id);
+				return { code: `export default ${JSON.stringify(buffer)}`, map: null };
 			}
-
-			const base64 = fs.readFileSync(path, { encoding: 'base64' });
-			return { code: `export default ${JSON.stringify(base64)}`, map: null };
 		}
 	};
 }

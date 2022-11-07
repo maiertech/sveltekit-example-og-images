@@ -1,5 +1,5 @@
-import signika_bold from '$lib/fonts/Signika-Bold.ttf?base64';
-import signika_regular from '$lib/fonts/Signika-Regular.ttf?base64';
+import signika_bold from '$lib/fonts/Signika-Bold.ttf';
+import signika_regular from '$lib/fonts/Signika-Regular.ttf';
 import { Resvg } from '@resvg/resvg-js';
 import satori from 'satori';
 import { html as toReactNode } from 'satori-html';
@@ -25,13 +25,13 @@ export async function componentToPng(component, props, width, height) {
 				name: 'Signika',
 				style: 'normal',
 				weight: 400,
-				data: Buffer.from(signika_regular, 'base64')
+				data: Buffer.from(signika_regular)
 			},
 			{
 				name: 'Signika',
 				style: 'normal',
 				weight: 700,
-				data: Buffer.from(signika_bold, 'base64')
+				data: Buffer.from(signika_bold)
 			}
 		],
 		width,
